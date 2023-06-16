@@ -15,6 +15,9 @@ import TituloPrincipal from './componentes/TituloPrincipal/TituloPrincipal'
 import ItemCount from './componentes/ItemCount/ItemCount'
 import NavBar from './componentes/NavBar/NavBar'
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer'
+import Promesas from './componentes/Promesas/Promesas'
+import Map from './componentes/Map/Map'
+import Dolar from './componentes/Dolar/Dolar'
 
 const App = () => {
   // Aca se escribe la parte logica. La funcion flecha sirve para renderizar la App en el navegador.
@@ -24,15 +27,20 @@ const App = () => {
     <>
     <NavBar/>
     <br /> 
-    <ItemListContainer greeting = {"Bienvenido usuario a"}/>
+    <ItemListContainer greeting = {"Bienvenido usuario a"} />
     <br />
-    <TituloPrincipal titulo = {"PRODUCCION DE FOTOS"} dia = {"viernes"} />
+    <TituloPrincipal titulo = {"PRODUCCION DE FOTOS"} />
     <br />
-    <ItemCount />
+    <ItemCount stock = {15} inicial = {1} />
+    <br />
+    <ItemCount stock = {24} inicial = {3} />
     <br />
     <img src="https://placekitten.com/200/300" alt="gatito" />
     <br />
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, eos molestias voluptatibus, aperiam culpa, exercitationem officia nesciunt quae a quia impedit in quod quam. Quae facilis eaque sequi esse quod.</p>
+    <Promesas/>
+    <Map />
+    <Dolar />
     </>
   )
 }
@@ -54,6 +62,14 @@ Es un objeto que contiene informacion del componente que puede cambiar durante l
 Para crear y manipular el estado hay que ayudarnos con la libreria propia de React, llamada HOOKS.
 Hooks se llama usando "useState"
 El ejemplo mas basico de un ESTADO es un contador en el carrito de compras. 
+
+Clase 5 - 9'
+Ciclo de vida de los componentes: Serie de estados por los cuales pasa todo componente.
+Montaje (ingresa el componente al DOM), Actualizacion (se actualiza el valor del contador) y Desmontaje (desaparece el contador porque fuiste al carrito). 
+
+Clase 5 - 31'
+Nuevo HOOK: useEffect es para hacer mas cosas que solo renderizar el componente. Como por ejemplo:
+Realizar operaciones, usar eventos, consumir datos de algun servidor, etc.
 */
 
 export default App

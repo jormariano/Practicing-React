@@ -5,28 +5,36 @@ Hay que trabajar con un ESTADO que va a guardar el num de productos seleccionado
 ESTADO: Es un objeto que contiene informacion del componente que puede cambiar durante la ejecucion de la App 
 Para crear y manipular el ESTADO hay que ayudarnos con la libreria propia de React, llamada HOOKS.
 Hooks se llama usando "useState" 
-useState retorna un Array con dos elementos, el primero es el estado en si (ej: contador) y el segundo es una funcion que permite cambiar/actualizar el valor del estado. La funcion siempre arranca con setNombredeestado. Dentro de useState() va el num de inicializacion del contador. */
+useState retorna un Array con dos elementos, el primero es el estado en si (ej: contador) y el segundo es una funcion que permite cambiar/actualizar el valor del estado. La funcion siempre arranca con setNombredeestado. Dentro de useState() va el num de inicializacion del contador. 
+Clase 5 18': 
+Los datos se reciben por props de algun componente superior de algun componente padre. Las props se reciben desestructuradas en dos variables {stock, inicial} */
 
-const ItemCount = () => {
-  const [contador, setContador] = useState(1);
+const ItemCount = ({stock, inicial}) => {
+  const [contador, setContador] = useState(inicial);
 
   const incrementar = () => {
-    if (contador < 10){
-    setContador (contador + 1);
+    if (contador < stock) {
+      setContador(contador + 1);
+    }
   }
-}
 
   const decrementar = () => {
-    if (contador > 1) {
-    setContador (contador - 1);
+    if (contador > inicial) {
+      setContador(contador - 1);
+    }
   }
-}
+
+  const agregarCarrito = () => {
+    console.log(`Agregado ${contador} items`)
+  }
 
   return (
     <>
+      <h3>Contador</h3>
       <button onClick={incrementar}> + </button>
-      <p> {contador} </p>
+      <strong> {contador} </strong>
       <button onClick={decrementar}> - </button>
+      <button onClick={agregarCarrito}>Agregar al Carrito</button>
     </>
   )
 }
