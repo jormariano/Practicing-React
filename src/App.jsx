@@ -11,13 +11,16 @@ import './App.css'
 // App es el componente principal de toda la aplicacion. 
 // Un componente solo puede retornar un elemento, por eso una solucion es envolver todo en una etiqueta semantica como un <div> <nav>
 
-import TituloPrincipal from './componentes/TituloPrincipal/TituloPrincipal'
+import CartWidget from './componentes/CartWidget/CartWidget'
+import Categorias from './componentes/Categorias/categorias'
 import ItemCount from './componentes/ItemCount/ItemCount'
-import NavBar from './componentes/NavBar/NavBar'
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer'
-import Promesas from './componentes/Promesas/Promesas'
 import Map from './componentes/Map/Map'
-import Dolar from './componentes/Dolar/Dolar'
+import NavBar from './componentes/NavBar/NavBar'
+import Promesas from './componentes/Promesas/Promesas'
+import Temporizador from './componentes/Temporizador/Temporizador'
+import TituloPrincipal from './componentes/TituloPrincipal/TituloPrincipal'
+import UseRef from './componentes/UseRef/UseRef'
 
 const App = () => {
   // Aca se escribe la parte logica. La funcion flecha sirve para renderizar la App en el navegador.
@@ -25,22 +28,27 @@ const App = () => {
   // En el return vamos a retornar la interfaz del usuario.
   return (
     <>
-    <NavBar/>
-    <br /> 
-    <ItemListContainer greeting = {"Bienvenido usuario a"} />
-    <br />
-    <TituloPrincipal titulo = {"PRODUCCION DE FOTOS"} />
-    <br />
-    <ItemCount stock = {15} inicial = {1} />
-    <br />
-    <ItemCount stock = {24} inicial = {3} />
-    <br />
-    <img src="https://placekitten.com/200/300" alt="gatito" />
-    <br />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, eos molestias voluptatibus, aperiam culpa, exercitationem officia nesciunt quae a quia impedit in quod quam. Quae facilis eaque sequi esse quod.</p>
-    <Promesas/>
-    <Map />
-    <Dolar />
+      <NavBar />
+      <br />
+      <ItemListContainer greeting={"Bienvenido usuario a"} />
+      <br />
+      <TituloPrincipal titulo={"PRODUCCION DE FOTOS"} />
+      <br />
+      <ItemCount stock={15} inicial={1} />
+      <br />
+      <ItemCount stock={24} inicial={3} />
+      <br />
+      <img src="https://placekitten.com/200/300" alt="gatito" />
+      <br />
+      <Categorias />
+      <br />
+      <CartWidget />
+      <br />
+      <Promesas />
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, eos molestias voluptatibus, aperiam culpa, exercitationem officia nesciunt quae a quia impedit in quod quam. Quae facilis eaque sequi esse quod.</p>
+      <Map />
+      <UseRef />
+      <Temporizador />
     </>
   )
 }
