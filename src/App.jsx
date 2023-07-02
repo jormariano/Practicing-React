@@ -11,10 +11,11 @@ import './App.css'
 // App es el componente principal de toda la aplicacion. 
 // Un componente solo puede retornar un elemento, por eso una solucion es envolver todo en una etiqueta semantica como un <div> <nav>
 
-import CartWidget from './componentes/CartWidget/CartWidget'
+import AsyncAwait from './componentes/AsyncAwait/AsyncAwait'
 import Categorias from './componentes/Categorias/categorias'
 import ItemCount from './componentes/ItemCount/ItemCount'
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer'
+import JSONPlace from './componentes/JSONPlace/JSONPlace'
 import Map from './componentes/Map/Map'
 import NavBar from './componentes/NavBar/NavBar'
 import Promesas from './componentes/Promesas/Promesas'
@@ -27,29 +28,24 @@ const App = () => {
 
   // En el return vamos a retornar la interfaz del usuario.
   return (
-    <>
+    <div className="appPrincipal">
       <NavBar />
-      <br />
-      <ItemListContainer greeting={"Bienvenido usuario a"} />
-      <br />
       <TituloPrincipal titulo={"PRODUCCION DE FOTOS"} />
-      <br />
-      <ItemCount stock={15} inicial={1} />
-      <br />
-      <ItemCount stock={24} inicial={3} />
-      <br />
-      <img src="https://placekitten.com/200/300" alt="gatito" />
-      <br />
-      <Categorias />
-      <br />
-      <CartWidget />
-      <br />
-      <Promesas />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, eos molestias voluptatibus, aperiam culpa, exercitationem officia nesciunt quae a quia impedit in quod quam. Quae facilis eaque sequi esse quod.</p>
-      <Map />
-      <UseRef />
-      <Temporizador />
-    </>
+      <AsyncAwait />
+      <JSONPlace />
+      {
+        /*
+              <ItemListContainer greeting={"Bienvenido usuario a"} />       
+              <ItemCount stock={15} inicial={1} />
+              <ItemCount stock={24} inicial={3} />
+              <Categorias />
+              <Promesas />
+              <Map />
+              <UseRef />
+              <Temporizador />
+        */
+      }
+    </div>
   )
 }
 
