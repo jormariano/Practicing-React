@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react"
 
+// Consumiendo API de JSONPlace para practicar
+
+
 const JSONPlace = () => {
 
     const [usuarios, setUsuarios] = useState([]);
@@ -19,7 +22,19 @@ const JSONPlace = () => {
     }, [])
 
     return (
-        <div>JSONPlace</div>
+        <div>
+            <h2>Usuarios de JSONPlace</h2>
+            <ul>
+                {
+                    usuarios.map(usuario => {
+                        return (
+                            <li key={usuario.id}>{usuario.name}</li>
+                        )
+                    })
+
+                }
+            </ul>
+        </div>
     )
 }
 

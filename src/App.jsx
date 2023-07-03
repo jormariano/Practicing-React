@@ -18,6 +18,7 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import JSONPlace from './componentes/JSONPlace/JSONPlace'
 import Map from './componentes/Map/Map'
 import NavBar from './componentes/NavBar/NavBar'
+import Netflic from './componentes/Netflic/Netflic'
 import Promesas from './componentes/Promesas/Promesas'
 import Temporizador from './componentes/Temporizador/Temporizador'
 import TituloPrincipal from './componentes/TituloPrincipal/TituloPrincipal'
@@ -31,8 +32,8 @@ const App = () => {
     <div className="appPrincipal">
       <NavBar />
       <TituloPrincipal titulo={"PRODUCCION DE FOTOS"} />
-      <AsyncAwait />
-      <JSONPlace />
+      <Netflic />
+
       {
         /*
               <ItemListContainer greeting={"Bienvenido usuario a"} />       
@@ -43,6 +44,8 @@ const App = () => {
               <Map />
               <UseRef />
               <Temporizador />
+              <AsyncAwait />
+              <JSONPlace />
         */
       }
     </div>
