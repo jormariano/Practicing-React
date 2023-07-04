@@ -13,6 +13,7 @@ import './App.css'
 
 import AsyncAwait from './componentes/AsyncAwait/AsyncAwait'
 import Categorias from './componentes/Categorias/categorias'
+import Email from './componentes/Email/Email'
 import ItemCount from './componentes/ItemCount/ItemCount'
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer'
 import JSONPlace from './componentes/JSONPlace/JSONPlace'
@@ -31,11 +32,11 @@ const App = () => {
   return (
     <div className="appPrincipal">
       <NavBar />
-      <TituloPrincipal titulo={"PRODUCCION DE FOTOS"} />
-      <Netflic />
+      <Email />
 
       {
         /*
+              <TituloPrincipal titulo={"PRODUCCION DE FOTOS"} />      
               <ItemListContainer greeting={"Bienvenido usuario a"} />       
               <ItemCount stock={15} inicial={1} />
               <ItemCount stock={24} inicial={3} />
@@ -46,6 +47,7 @@ const App = () => {
               <Temporizador />
               <AsyncAwait />
               <JSONPlace />
+              <Netflic />
         */
       }
     </div>
