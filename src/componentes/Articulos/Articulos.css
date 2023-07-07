@@ -1,0 +1,14 @@
+.artBolonia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artBolonia img {
+    height: 500px;
+    width: 800px;
+}
+
+.artBolonia button {
+    margin: 10px;
+}
