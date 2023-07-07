@@ -1,5 +1,5 @@
-import { useContador } from "./useContador"
-import { useFetch } from "./useFetch";
+import { useContador } from "../../hooks/useContador"
+import { useFetch } from "../../hooks/useFetch";
 
 const CrearContador = () => {
     const {contador, incrementar, decrementar} = useContador(1, 20);

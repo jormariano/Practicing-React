@@ -27,10 +27,20 @@ import Promesas from './componentes/Promesas/Promesas'
 import Temporizador from './componentes/Temporizador/Temporizador'
 import TituloPrincipal from './componentes/TituloPrincipal/TituloPrincipal'
 import UseRef from './componentes/UseRef/UseRef'
-import CrearContador from './Hooks/CrearContador'
+import CrearContador from './componentes/CrearComponente/CrearContador'
 
+// Clase 8. Importamos funcion y el componente.
+import Mensaje from './componentes/Patrones/Mensaje'
+import Producto from './componentes/Patrones/Producto'
+import { mensajeTitulo, aumentoPrecio } from './componentes/Patrones/Hoc'
+
+import Login from './componentes/Patrones/Login'
+
+// Aca se escribe la parte logica. La funcion flecha sirve para renderizar la App en el navegador.
 const App = () => {
-  // Aca se escribe la parte logica. La funcion flecha sirve para renderizar la App en el navegador.
+  const NuevoComponente = mensajeTitulo(Mensaje);
+
+  const NuevoPrecio = aumentoPrecio(Producto);
 
   // En el return vamos a retornar la interfaz del usuario.
   return (
@@ -43,6 +53,9 @@ const App = () => {
           <h3>No te lo pierdas</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quidem repellendus, consectetur veniam autem est odit animi esse voluptas, quibusdam rem possimus inventore deleniti ullam! Non minus quidem laudantium impedit.</p>
         </Articulos>
+        <NuevoComponente />
+        <NuevoPrecio nombre="Cuadro" precio={50} />
+        <Login />
       </div>
     </>
   )
