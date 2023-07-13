@@ -20,6 +20,7 @@ import Home from './componentes/Home/Home'
 import ItemCount from './componentes/ItemCount/ItemCount'
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer'
 import JSONPlace from './componentes/JSONPlace/JSONPlace'
+import localStorage from './componentes/LocalStorage/LocalStorage'
 import Map from './componentes/Map/Map'
 import NavBar from './componentes/NavBar/NavBar'
 import Netflic from './componentes/Netflic/Netflic'
@@ -71,6 +72,7 @@ const App = () => {
 <Temporizador />
 <AsyncAwait />
 <JSONPlace />
+<LocalStorage />
 <Netflic />
 <Email />
 */
