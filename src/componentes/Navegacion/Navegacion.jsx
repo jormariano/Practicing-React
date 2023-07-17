@@ -1,4 +1,4 @@
-/* Clase 9 - 17' - Quede en los 40'
+/* Clase 9 - 17' - Quede en los 50'
 
 La etiqueta <a href:"https:instagram.com" target=_blank>Instagram </a> se utiliza para Enlaces Absolutos que te conectan con paginas externas a la aplicacion, sin que se cierre nuestra App gracias a target=_blank.
 No utilizar etique <a> para conectar componentes dentro de la aplicacion.
@@ -12,6 +12,7 @@ Routes: Defini las rutas de navegacion
 Route: Define una ruta en especifico
 
 Hay que pasarle la prop "path" con la ruta a vincular y el "elemento" con el componente que se va a renderizar cuando haga click
+El home se muestra en toda la App, por lo que va: <BrowserRouter> <NavBar /> <Routes>
 
 Ejemplo en App.jsx:
 
@@ -35,4 +36,12 @@ const App = () => {
 }
 
 export default App
+
+En cada Componente hay que importar: import {Link, NavLink} from "react-router-dom";
+
+La diferencia entre Link y NavLink es que NavLink se utiliza para un menu de navegacion, conecta igual que Link, pero se coloca una Clase especial de CSS para darle estilo.
+
+<Route path="/item/:idItem" element={<ItemDetailContainer/>} />
+El :idItem se utiliza para identificar y mostrar un productos dentro de la categoria. En el componente es necesario utilizar un hook import {useParams} from "react-router-dom"
+
 */

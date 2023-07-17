@@ -14,8 +14,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Articulos from './componentes/Articulos/Articulos'
 import AsyncAwait from './componentes/AsyncAwait/AsyncAwait'
+import Automatico from './componentes/Automatico/Automatico'
 import Categorias from './componentes/Categorias/categorias'
 import Email from './componentes/Email/Email'
+import Eventos from './componentes/Eventos/Eventos'
+import Formulario from './componentes/Formulario/Formulario'
 import Home from './componentes/Home/Home'
 import ItemCount from './componentes/ItemCount/ItemCount'
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer'
@@ -57,6 +60,9 @@ const App = () => {
         <NuevoComponente />
         <NuevoPrecio nombre="Cuadro" precio={50} />
         <Login />
+        <Eventos />
+        <Formulario />
+        <Automatico />
       </div>
     </>
   )
@@ -82,8 +88,8 @@ const App = () => {
  <Routes>
  <Route path='/' element={<Home />} />
  <Route path='/Categorias' element={<Categorias />} />
- <Route path='Promesas' element={<Articulos />} />
- <Route path='Promesas' element={<Promesas />} />
+ <Route path='/Promesas' element={<Articulos />} />
+ <Route path='/Promesas' element={<Promesas />} />
  <Route path='*' element={<h2>Sitio en construccion</h2>} />
  </Routes>
  </BrowserRouter >
